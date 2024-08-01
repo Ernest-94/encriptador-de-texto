@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedorLogo" id="contenedorLogo"></div>
+    </header>
+    <div class="contenedor">
+        <div class="zonaPorEncriptar">
+            <textarea class="areaEntrada" id="textoEntrada" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="zonaAdvertencia">
+                <img class="iconoAdvertencia" src="Assets\imagen-advertencia.svg" alt="Un circulo con un símbolo de exclamación en el centro.">
+                <p class="textoAdvertencia">Usa solo minúsculas y sin acentos.</p>
+            </div>
+            <div class="botonesContenedor">
+                <button class="boton botonMain botonAzul" id="botonEncriptado">Encriptar</button>
+                <button class="boton botonMain botonGris" id="botonDesencriptado">Desencriptar</button>
+            </div>
+        </div>
+        <div class="zonaEncriptado">
+            <p id="textoSalida" class="textoSalida"></p>
+            <div class="contenedorImagen" id="contenedorImagen"></div>
+            <h2 class="zonaEncriptadoSub" id="textoH2">Ningún mensaje fue encontrado</h2>
+            <button class="boton botonCopiar botonGris hidden" id="botonCopiarTexto">Copiar</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --color-primario:#f3f5fc;
+    --color-secundario:#0a3871;
+    --color-terciario:#ffffff;
+    --color-boton-hover:#d8dfe8;
+    --color-boton-hover2:#072b61;
+    --color-letras-bold:#343a40;
+
+
+    --fuente-inter:"Inter", sans-serif;
+
+    --contenedor-width:400px;
+    --contenedor-height:944px;
+    --contenedor-border-radius:32px;
+
+    --boton-height:67px;
+    --boton-border-radius:24px;
+    --boton-main-width:328px;
+    --boton-copiar-width:336px;
+
+    --textarea-width: 50%;
+    --textarea-height: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--fuente-inter);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primario);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+body.dark-mode{
+    --color-primario:#1E1E1E;
+    --color-secundario:#f3f5fc;
+    --color-terciario:#343a40;
+    --color-boton-hover:#252729;
+    --color-boton-hover2:#d8dfe8;
+    --color-letras-bold:#ffffff;
+
+}
+body.dark-mode .zonaAdvertencia{
+    color: var(--color-letras-bold);
+}
+body.dark-mode .botonAzul{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+body.dark-mode .botonAzul:hover{
+    background-color: var(--color-boton-hover);
+}
+body.dark-mode .botonGris{
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+}
+body.dark-mode .botonGris:hover{
+    background-color: var(--color-boton-hover2);
+}
+body.dark-mode .textoSalida{
+    color: var(--color-secundario);
+}
+
+.textoSalida{
+    transition: color 0.3s ease;
+}
+
+svg path, svg rect, svg circle{
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.hidden{
+    display: none;
+}
+
+.header{
+    width: 100%;
+    height: 10%;
+    margin: 2%;
+}
+
+.logoAlura{
+    height: 100%;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap:180px
+}
+
+.zonaPorEncriptar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.zonaAdvertencia{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-items: left;
+    font-size: .75rem;
+}
+
+.zonaEncriptado{
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 40%;
+    height: var(--textarea-height);
+    border-radius: var(--contenedor-border-radius);
+    background-color: var(--color-terciario);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.imagen{
+    width: 80%;
+}
+.zonaEncriptadoSub{
+    font-weight: 700;
+    color: var(--color-letras-bold)
+}
+
+.boton{
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    height: var(--boton-height);
+    border-radius: var(--boton-border-radius);
+    border: 1px solid var(--color-secundario);
+    cursor: pointer;
+    transition: width 0.3s ease;
+    
+}
+
+.botonesContenedor{
+    display: flex;
+    width: 42.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.botonMain{
+    width: var(--boton-main-width);
+}
+
+.botonCopiar{
+    width: 80%;
+}
+
+.botonGris{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+.botonGris:hover{
+    background-color: var(--color-boton-hover);
+}
+
+.botonAzul{
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+}
+.botonAzul:hover{
+    background-color: var(--color-boton-hover2);
+}
+
+.areaEntrada{
+    font-family: var(--fuente-inter);
+    color: var(--color-secundario);
+    font-size: 2rem;
+    width: var(--textarea-width);
+    height: var(--textarea-height);
+    border: none;
+    resize: none;
+    background-color: transparent;
+}
+.areaEntrada::placeholder{
+    color: var(--color-secundario);
+    opacity: 1;
+}
+
+@media (max-width:1400px) {
+    
+    .botonesContenedor{
+        width: 100%;
+    }
+}
+@media (max-width:800px) {
+    .contenedor{
+        flex-direction: column;
+        gap:40px
+    }
+    .zonaPorEncriptar{
+        width: 80%;
+    }
+    .botonesContenedor{
+        width: 100%;
+    }
+    .boton{
+        width: 80%;
+    }
+    .areaEntrada{
+        width: 100%;
+    }
+    .zonaEncriptado{
+        width: 90%;
+    }
+}
